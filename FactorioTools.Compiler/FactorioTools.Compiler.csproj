@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishAot>true</PublishAot>
+    <InvariantGlobalization>true</InvariantGlobalization>
+		<RootNamespace>FactorioTools.Compiler</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tomlyn.Signed" Version="2.10.1" />
+    <PackageReference Include="UniTask" Version="2.5.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FactorioTools\FactorioTools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="FactorioTools" />
+  </ItemGroup>
+
+</Project>

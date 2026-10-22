@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+		<Compile Remove="FactorioTools\**" />
+		<Compile Remove="FactorioTools.Compiler\**" />
+		<Compile Remove="FactorioTools.Shortcuts\**" />
+		<Compile Remove="temp\**" />
+    <EmbeddedResource Remove="FactorioTools\**" />
+    <EmbeddedResource Remove="FactorioTools.Compiler\**" />
+		<EmbeddedResource Remove="FactorioTools.Shortcuts\**" />
+		<EmbeddedResource Remove="temp\**" />
+		<None Remove="FactorioTools\**" />
+		<None Remove="FactorioTools.Compiler\**" />
+		<None Remove="FactorioTools.Shortcuts\**" />
+		<None Remove="temp\**" />
+	</ItemGroup>
+
+</Project>
