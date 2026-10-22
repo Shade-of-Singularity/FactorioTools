@@ -21,6 +21,6 @@ To deploy in bulk, run .exe and provide a list of locations to scout/compile:
 ```BATCH
 "F:\Tools\FactorioTools\FactorioTools.Compiler.exe" "F:\MyMods\Pyanodons Addon" "F:\MyMods\Space Exploration Rebalance"
 ```
-For Linux uses - you probably know how to run apps.
+For Linux users - you probably know how to run apps with arguments.
 
 I don't tho - if you can - please suggest how to do it.
