@@ -211,8 +211,9 @@ static void StageAll(string root)
 		Stage(zip, "space-data-final-fixes");
 
 		// Removing unnecessary files.
-		try { File.Delete(Path.Combine(zip, DeployFileName)); }
-		catch { /* Expected. Ignored. */ }
+		DeleteFile(Path.Combine(zip, DeployFileName));
+		DeleteFiles(zip, "*.pdb");
+		DeleteFiles(zip, "*.exe");
 
 		// Archiving:
 		FileStream? stream = null;
@@ -320,6 +321,19 @@ static void Stage(string root, string control)
 	}
 }
 
+static void DeleteFile(string path, bool log = true)
+{
+	try { File.Delete(path); }
+	catch (Exception ex) { if (log) ex.Out($"Failed to delete unnecessary file: {path}\n"); }
+}
+static void DeleteFiles(string path, string searchPattern, bool log = true)
+{
+	foreach (var f in Directory.EnumerateFiles(path, searchPattern))
+	{
+		try { File.Delete(f); }
+		catch (Exception ex) { if (log) ex.Out($"Failed to delete unnecessary file: {f}\n"); }
+	}
+}
 
 
 
