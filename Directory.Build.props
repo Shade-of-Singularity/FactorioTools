@@ -6,10 +6,13 @@
 		<Copyright>Shade of Singularity (SoG)</Copyright>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
-		<DefineConstants>OS_WINDOWS</DefineConstants>
+	<PropertyGroup Condition="'$(Configuration)'=='Debug' or '$(Configuration)'=='Release'">
+		<DefineConstants>WINDOWS</DefineConstants>
+		<PublishAot>true</PublishAot>
 	</PropertyGroup>
-	<PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Linux'))">
-		<DefineConstants>OS_LINUX</DefineConstants>
+
+	<PropertyGroup Condition="'$(Configuration)'=='LinuxDebug' or '$(Configuration)'=='LinuxRelease'">
+		<DefineConstants>LINUX</DefineConstants>
 	</PropertyGroup>
+	
 </Project>
