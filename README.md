@@ -9,7 +9,7 @@ After that, simply put it in the root (or one folder up) from where your info.js
 ## Running
 When you first run `FactorioTools.Compiler.exe` - it will create `deploy.toml` file near each found `info.json`, if it doesn't exist:
 ```TOML
-output = "%APPDATA%\Factorio\mods"
+output = "%APPDATA%/Factorio/mods"
 ```
 (Note: right now, only `%APPDATA%` special symbol is supported)
 
